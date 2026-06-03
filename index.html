@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big-Chat </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>BigChat</h1>
+        <div class="stats">
+            <span class="dot"></span> Online: <span id="online-count">0</span>
+        </div>
+    </div>
+
+  <div class="main-container">
+        <div class="video-container">
+            <video id="remoteVideo" autoplay playsinline></video>
+            <video id="localVideo" autoplay playsinline muted></video>
+            <div id="status">Shtyp 'Start' për të filluar...</div>
+        </div>
+
+  <div class="controls">
+            <select id="countrySelect">
+                <option value="All">Të gjitha shtetet</option>
+                <option value="KS">Kosovë</option>
+                <option value="AL">Shqipëri</option>
+                <option value="MK">Maqedoni e Veriut</option>
+                <option value="CH">Zvicër</option>
+                <option value="DE">Gjermani</option>
+            </select>
+            <button id="startBtn" class="btn btn-green">Start</button>
+            <button id="skipBtn" class="btn btn-blue" disabled>Skip (Next)</button>
+            <button id="stopBtn" class="btn btn-red" disabled>Stop</button>
+        </div>
+    </div>
+
+   <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
